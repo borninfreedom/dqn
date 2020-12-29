@@ -7,7 +7,7 @@ import random
 from gym import wrappers
 import torch.optim as optim
 import math
-
+import matplotlib.pyplot as plt
 
 Env_Name='CartPole-v0'
 
@@ -102,7 +102,7 @@ def run_episode(e,env):
         if done:
             print("{2} Episode {0} finished after {1} steps".format(e,steps,'\033[92m' if steps>=195
                                                                     else '\033[99m'))
-            episode_duration.append(steps)
+            episode_durations.append(steps)
          #   plot_duration()
             break
 
